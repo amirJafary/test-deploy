@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 function App() {
+
+  const [isShow, setIsShow] = useState(false)
+
+
+  setTimeout(() => {
+    setIsShow(true)
+  }, 5000)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      mamad babyyyyy
+      {isShow && <Helmet>
+        {console.log('mn')}
+        <title>App Title</title>
+        <meta property="og:title" content="The Rock" />
+        <meta property="og:type" content="video.movie" />
+        <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+        <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
+        <meta property="og:description"
+          content="Sean Connery found fame and fortune as the
+         suave, sophisticated British agent, James Bond." />
+      </Helmet>}
     </div>
   );
 }
-
-export default App;
+export default App
